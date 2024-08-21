@@ -6,6 +6,25 @@
 	<artifactId>RestAssuredApiAutomationFramework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.4.0</version>
+					<configuration>
+						<suiteXmlFiles>
+							<suiteXmlFile>
+								${basedir}/src/test/resources/XML/${suiteFile}</suiteXmlFile>
+						</suiteXmlFiles>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+
 	<dependencies>
 		<dependency>
 			<groupId>org.testng</groupId>
